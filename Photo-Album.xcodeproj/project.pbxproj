@@ -150,8 +150,8 @@
 		BC053AFA1C5173E8008F6495 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BC053B1E1C53C716008F6495 /* PhotoViewController.swift */,
 				BC053AA31C50F8DD008F6495 /* AlbumViewController.swift */,
+				BC053B1E1C53C716008F6495 /* PhotoViewController.swift */,
 				BC053B1A1C53C661008F6495 /* PhotoDetailsViewController.swift */,
 				BC053B121C52D0D7008F6495 /* Resources */,
 			);

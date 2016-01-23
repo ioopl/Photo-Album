@@ -95,7 +95,6 @@ class AlbumViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         if let cellID = albumData[indexPath.row].id, cellTitle = albumData[indexPath.row].title, cellUserID = albumData[indexPath.row].userId {
         
-        
         cell.id.text = "\(cellID)"
         cell.title.text = cellTitle
         cell.userId.text = "\(cellUserID)"

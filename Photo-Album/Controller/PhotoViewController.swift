@@ -68,6 +68,16 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
         if let albumTitle = photoData[indexPath.row].title {
             cell.lblTitle.text = albumTitle
         }
+        
+        if let pID = photoData[indexPath.row].id {
+            cell.lblID.text = "\(pID)"
+        }
+        
+        if let albumID = photoData[indexPath.row].albumId {
+            cell.lblAlbumID.text = "\(albumID)"
+        }
+        
+        
         return cell
     }
     
@@ -76,9 +86,15 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let cell = collectionView.cellForItemAtIndexPath(indexPath) as! PhotoCollectionViewCell
-        if let aid = cell.lblUrl.text {
-                    objectIDQueryString = aid
-                    self.performSegueWithIdentifier(seguePhotoDetails, sender: self)
+        if let thumbURL = cell.lblUrl.text, atitle = cell.lblTitle.text,
+            pID = cell.lblID.text, aID = cell.lblAlbumID.text  {
+                
+                objectImageURL = thumbURL
+                photoTitle = atitle
+                photoID = pID
+                albumID = aID
+                
+                self.performSegueWithIdentifier(seguePhotoDetails, sender: self)
         }
     }
 

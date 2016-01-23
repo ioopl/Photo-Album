@@ -13,4 +13,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var lblUrl: UILabel!
     @IBOutlet weak var imgViewPhoto: UIImageView!
     @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var lblID: UILabel!
+    @IBOutlet weak var lblAlbumID: UILabel!
+    
 }
